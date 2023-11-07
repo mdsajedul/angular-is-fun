@@ -1,0 +1,23 @@
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood</th>
+            <th>Gender</th>
+            <th>Basic Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList">
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.blood }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.basicInfo }}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>

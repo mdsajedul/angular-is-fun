@@ -1,0 +1,44 @@
+<div class="container my-3 d-flex justify-content-center">
+    <div class="w-50">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group my-3">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control mt-1" id="name" name="name" [(ngModel)]="user.name" required>
+            </div>
+
+            <div class="form-group my-3">
+              <label for="age">Age:</label>
+              <input type="number" class="form-control  mt-1" id="age" name="age" [(ngModel)]="user.age" required>
+            </div>
+
+            <div class="form-group my-3">
+              <label for="gender">Gender:</label>
+              <select class="form-control" id="gender" name="gender" [(ngModel)]="user.gender" required>
+                <option selected value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group my-3">
+                <label for="blood">Blood Group:</label>
+                <select class="form-control" id="blood" name="blood" [(ngModel)]="user.blood" required>
+                <option selected value="Opos">Opos</option>
+                <option value="Oneg">Oneg</option>
+                <option value="ABpos">ABpos</option>
+                </select>
+            </div>
+
+            <div class="form-group my-3">
+              <label for="basicInfo">Basic Info:</label>
+              <textarea class="form-control  mt-1" id="basicInfo" name="basicInfo" [(ngModel)]="user.basicInfo" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <!-- user list component as a child  -->
+          <app-user-list [userList]="userList">
+
+          </app-user-list>
+    </div>
+</div>
